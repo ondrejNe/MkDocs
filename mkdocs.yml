@@ -1,0 +1,98 @@
+site_name: MkDocs test page
+# site_url: https://github
+
+nav:
+  - Homepage: index.md
+  - FSW 4.0.0: 
+      - The FSW: fsw.md
+      - SUB: subsection/subsection.md
+  - Notes: notes.md
+
+theme:
+  name: material
+  features:
+    # Navigation plugins
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    # Table of contents plugin
+    - toc.integrate
+    # Seacrh plugins
+    - search.suggest
+    - search.highlight
+    # Content plugins
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.action.view
+  language: en
+  palette:
+    # Light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: indigo
+      accent: lime
+    # Dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: indigo
+      accent: lime
+
+plugins:
+  - search
+#   - social
+
+# Links to media resource
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com
+    - icon: fontawesome/brands/slack
+      link: https://www.slack.com
+
+
+markdown_extensions:
+
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/"  target="_blank" rel="noopener">test</a>
